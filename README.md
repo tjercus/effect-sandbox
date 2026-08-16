@@ -33,8 +33,13 @@ See the [official install guide](https://docs.deno.com/runtime/getting_started/i
 ## Run
 
 ```bash
-./start.sh          # run once
-./watch.sh          # re-run on file changes
+./start.sh          # run once (macOS/Linux)
+./watch.sh          # re-run on file changes (macOS/Linux)
+```
+
+```powershell
+.\start.ps1         # run once (Windows)
+.\watch.ps1         # re-run on file changes (Windows)
 ```
 
 Or directly:
@@ -53,4 +58,5 @@ deno run --allow-read --allow-net main.ts
 
 - `main.ts` — entry point, a tiny Effect program.
 - `deno.json` — Deno config and npm imports (pulls in `effect`).
-- `start.sh` / `watch.sh` — convenience runners.
+- `start.sh` / `watch.sh` — convenience runners (macOS/Linux).
+- `start.ps1` / `watch.ps1` — convenience runners (Windows).
