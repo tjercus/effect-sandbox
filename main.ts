@@ -1,8 +1,9 @@
-import { Effect, Console } from "effect"
+import { Effect, pipe } from "effect"
 
-const program = Effect.gen(function* () {
-  yield* Console.log("Hello from Effect and Deno!")
-  return 42
-})
+const program = pipe(
+  Effect.succeed("hello, effect!"),
+  Effect.map(msg => msg.toUpperCase()),
+  Effect.tap(msg => Effect.log(msg))
+)
 
-Effect.runPromise(program).then(console.log)
+Effect.runPromise(program)
