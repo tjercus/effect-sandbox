@@ -1,5 +1,5 @@
 {
   "imports": {
-    "effect": "npm:effect@4.0.0-rc.115"
+    "effect": "npm:effect@4.0.2"
   }
 }
